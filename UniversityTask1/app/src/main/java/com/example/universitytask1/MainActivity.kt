@@ -1,6 +1,7 @@
 package com.example.universitytask1
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
@@ -37,12 +38,11 @@ class MainActivity : AppCompatActivity() {
     private fun onClickHandler(animal: Animal){
         val intent = Intent(this, DetailedDescription::class.java)
 
-        intent.putExtra("name", animal.name)
-        intent.putExtra("description", animal.description)
-        intent.putExtra("image", animal.image)
+        intent.putExtra("animal", animal)
         startActivity(intent)
     }
 
+    @SuppressLint("DiscouragedApi")
     private fun createAnimal(name: String, description: String, image: String): Animal{
         val res: Resources = resources
 
