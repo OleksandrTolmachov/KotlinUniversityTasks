@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UniversityTask1</string>
+    <string name="platypus">Platypus</string>
+    <string name="egg_laying_mammal_endemic">Egg-laying mammal endemic</string>
+    <string name="details">Details</string>
+    <string name="goblin_shark">Goblin shark</string>
+    <string name="rare_species_of_deep_sea_shark">Rare species of deep-sea shark</string>
+    <string name="shark_details">Details</string>
+    <string name="capybara">Capybara</string>
+    <string name="giant_cavy_rodent">Giant cavy rodent</string>
+    <string name="cavy_details">Details</string>
+    <string name="cd_animal2">animal2</string>
+    <string name="cd_animal3">animal3</string>
+    <string name="cd_animal1">animal1</string>
+    <string name="fd_platypus">The platypus (Ornithorhynchus anatinus), sometimes referred to as the duck-billed platypus, is a semiaquatic, egg-laying mammal endemic to eastern Australia, including Tasmania. The platypus is the sole living representative or monotypic taxon of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species appear in the fossil record.</string>
+    <string name="fd_goblin_shark">The goblin shark (Mitsukurina owstoni) is a rare species of deep-sea shark. Sometimes called a "living fossil", it is the only extant representative of the family Mitsukurinidae, a lineage some 125 million years old. This pink-skinned animal has a distinctive profile with an elongated, flat snout, and highly protrusible jaws containing prominent nail-like teeth. It is usually between 3 and 4 m (10 and 13 ft) long when mature, though it can grow considerably larger such as one captured in 2000 that is thought to have measured 6 m (20 ft).</string>
+    <string name="fd_capybara">The capybara[a] or greater capybara (Hydrochoerus hydrochaeris) is a giant cavy rodent native to South America. It is the largest living rodent and a member of the genus Hydrochoerus. The only other extant member is the lesser capybara (Hydrochoerus isthmius). Its close relatives include guinea pigs and rock cavies, and it is more distantly related to the agouti, the chinchilla, and the nutria. </string>
+</resources>
