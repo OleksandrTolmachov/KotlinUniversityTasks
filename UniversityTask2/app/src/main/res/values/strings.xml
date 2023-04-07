@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UniversityTask2</string>
+
+    <string name="Title1">Roma</string>
+    <string name="Genre1">Drama</string>
+    <string name="Description1">Roma follows Cleo (Yalitza Aparicio), a young domestic worker for a family in the middle-class neighborhood of Roma in Mexico City. Delivering an artful love letter to the women who raised him, Cuarón draws on his own childhood to create a vivid and emotional portrait of domestic strife and social hierarchy amidst political turmoil of the 1970s. </string>
+    <string name="Image1">https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_.jpg</string>
+
+    <string name="Title2">Rocks</string>
+    <string name="Genre2">Drama</string>
+    <string name="Description2">A teenage girl suddenly finds herself struggling to take care of herself and her younger brother.</string>
+    <string name="Image2">https://upload.wikimedia.org/wikipedia/en/a/ad/Rocks_poster.jpg</string>
+
+    <string name="Title3">Carol</string>
+    <string name="Genre3">Drama, Romance</string>
+    <string name="Description3">Set in 1950s New York, two women from very different backgrounds find themselves in the throes of love. A young woman in her 20s, Therese Belivet (Rooney Mara), is a clerk working in a Manhattan department store and dreaming of a more fulfilling life when she meets Carol (Cate Blanchett), an alluring woman trapped in a loveless, convenient marriage. As an immediate connection sparks between them, the innocence of their first encounter dims and their connection deepens.</string>
+    <string name="Image3">https://upload.wikimedia.org/wikipedia/en/1/10/Carol_film_poster.jpg</string>
+</resources>

@@ -23,15 +23,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(contentView)
 
         binding.detailsButton1.setOnClickListener {
-            onClickHandler(createAnimal("platypus", "fd_platypus", "platypus"))
+            onClickHandler(createAnimal
+                ("platypus", "fd_platypus", "platypus"))
         }
 
         binding.detailsButton2.setOnClickListener {
-            onClickHandler(createAnimal("goblin_shark", "fd_goblin_shark", "shark"))
+            onClickHandler(createAnimal
+                ("goblin_shark", "fd_goblin_shark", "shark"))
         }
 
         binding.detailsButton3.setOnClickListener {
-            onClickHandler(createAnimal("capybara", "fd_capybara", "capybara"))
+            onClickHandler(createAnimal
+                ("capybara", "fd_capybara", "capybara"))
         }
     }
 
@@ -46,10 +49,10 @@ class MainActivity : AppCompatActivity() {
     private fun createAnimal(name: String, description: String, image: String): Animal{
         val res: Resources = resources
 
-        val resNameId = resources.getIdentifier(name, "string", packageName)
+        val resNameId = res.getIdentifier(name, "string", packageName)
         val name: String = res.getString(resNameId)
 
-        val resDescriptionId = resources.getIdentifier(description, "string", packageName)
+        val resDescriptionId = res.getIdentifier(description, "string", packageName)
         val description: String = res.getString(resDescriptionId)
 
         return Animal(name, description, image)
