@@ -22,6 +22,7 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val button = view?.findViewById<Button>(R.id.request)
+
         setSpinnerChoices(view.findViewById(R.id.spinner))
 
         button?.setOnClickListener {
