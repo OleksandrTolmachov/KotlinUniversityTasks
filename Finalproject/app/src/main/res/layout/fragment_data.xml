@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.DataFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="Response"
+            android:textSize="28sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="607dp">
+
+            <TextView
+                android:id="@+id/responseContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="7sp"
+                android:paddingRight="7sp"
+                android:text="Please, wait..."
+                android:textSize="22sp" />
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="156dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Go back"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

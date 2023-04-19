@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Final project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello home fragment</string>
+    <string name="enter_role">Enter role:</string>
+    <string name="enter_your_role_here">Enter your role here...</string>
+    <string name="enter_question">Enter question:</string>
+    <string name="enter_your_question_here">Enter your question here...</string>
+    <string name="request"><![CDATA[Resuest ->]]></string>
+    <string-array name="roles">
+        <item>user</item>
+        <item>assistant</item>
+        <item>system</item>
+    </string-array>
+</resources>
