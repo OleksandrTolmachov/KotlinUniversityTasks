@@ -1,6 +1,5 @@
 package com.example.finalproject.views
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,18 +9,20 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.finalproject.R
-import com.example.finalproject.viewmodels.MessageViewModel
+import com.example.finalproject.viewmodels.RequestViewModel
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
-    @SuppressLint("MissingInflatedId")
+    private val viewModel: RequestViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val button = view?.findViewById<Button>(R.id.request)
+        val button = view.findViewById<Button>(R.id.request)
 
         setSpinnerChoices(view.findViewById(R.id.spinner))
 
@@ -32,19 +33,17 @@ class HomeFragment : Fragment() {
             val roleInput = view.findViewById<Spinner>(R.id.spinner)
             val role = roleInput?.selectedItem.toString()
 
-            val messageViewModel = MessageViewModel(message, role)
-            val bundle = Bundle()
-            bundle.putParcelable("response", messageViewModel)
+            viewModel.setMessage(message)
+            viewModel.setRole(role)
 
             val nextFragment = DataFragment()
-            nextFragment.arguments = bundle
             fragmentManager?.beginTransaction()?.replace(R.id.fragmentHost, nextFragment)?.commit()
         }
 
         return view
     }
 
-    private fun setSpinnerChoices(spinner: Spinner){
+    private fun setSpinnerChoices(spinner: Spinner) {
         val adapter = ArrayAdapter.createFromResource(
             requireContext(),
             R.array.roles,

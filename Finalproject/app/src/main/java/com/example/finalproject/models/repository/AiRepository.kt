@@ -2,9 +2,9 @@ package com.example.finalproject.models.repository
 
 import com.example.finalproject.models.request.ApiInterface
 import com.example.finalproject.models.request.ChatCompletionRequest
-import com.example.finalproject.viewmodels.AiResponseViewModel
+import com.example.finalproject.models.response.AiResponseViewModel
 import com.example.finalproject.models.request.Message
-import com.example.finalproject.viewmodels.MessageViewModel
+import com.example.finalproject.viewmodels.RequestViewModel
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -34,10 +34,10 @@ class AiRepository {
         apiInterface = retrofit.create(ApiInterface::class.java)
     }
 
-    fun getResponse(message: MessageViewModel, callback: (AiResponseViewModel?) -> Unit) {
+    fun getResponse(message: RequestViewModel, callback: (AiResponseViewModel?) -> Unit) {
         val request = ChatCompletionRequest(
             model = AI_CORE_MODEL,
-            messages = listOf(Message(role = message.role, content = message.message))
+            messages = listOf(Message(role = message.roleValue, content = message.messageValue))
         )
 
         apiInterface.getChatCompletion(request).enqueue(object : Callback<AiResponseViewModel> {

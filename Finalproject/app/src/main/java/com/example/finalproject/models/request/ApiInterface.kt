@@ -1,7 +1,7 @@
 package com.example.finalproject.models.request
 
 import com.example.finalproject.BuildConfig
-import com.example.finalproject.viewmodels.AiResponseViewModel
+import com.example.finalproject.models.response.AiResponseViewModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Headers

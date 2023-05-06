@@ -1,18 +1,25 @@
 package com.example.finalproject.viewmodels
 
-import com.example.finalproject.models.request.ChatCompletionChoice
-import com.example.finalproject.models.request.ChatCompletionUsage
-import com.google.gson.annotations.SerializedName
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.example.finalproject.models.repository.AiRepository
 
-data class AiResponseViewModel(
-    val id: String,
-    @SerializedName("object")
-    val chatObject: String,
-    val created: Long,
-    val model: String,
-    val usage: ChatCompletionUsage,
-    val choices: List<ChatCompletionChoice>,
-    @SerializedName("finish_reason")
-    val finishReason: String,
-    val index: Int
-)
+class ResponseViewModel : ViewModel() {
+    private val responseLiveData: MutableLiveData<String> = MutableLiveData()
+
+    fun getAiResponse(message: RequestViewModel, repository: AiRepository) {
+
+        repository.getResponse(message) { chatCompletionResponse ->
+            val response = if (chatCompletionResponse != null && chatCompletionResponse.choices.isNotEmpty()) {
+                chatCompletionResponse.choices[0].message.content
+            } else {
+                "No response received"
+            }
+            responseLiveData.postValue(response)
+        }
+    }
+
+    val aiResponse: LiveData<String>
+        get() = responseLiveData
+}
