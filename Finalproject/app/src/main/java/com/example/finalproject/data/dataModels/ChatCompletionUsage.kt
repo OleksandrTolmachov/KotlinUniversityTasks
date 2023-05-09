@@ -1,4 +1,4 @@
-package com.example.finalproject.models.request
+package com.example.finalproject.data.dataModels
 
 import com.google.gson.annotations.SerializedName
 

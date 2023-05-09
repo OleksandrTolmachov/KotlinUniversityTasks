@@ -1,7 +1,8 @@
-package com.example.finalproject.models.request
+package com.example.finalproject.data
 
 import com.example.finalproject.BuildConfig
-import com.example.finalproject.models.response.AiResponseViewModel
+import com.example.finalproject.data.dataModels.AiResponseModel
+import com.example.finalproject.data.dataModels.ChatCompletionRequest
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.Headers
@@ -11,6 +12,6 @@ interface ApiInterface {
     @Headers("Content-Type: application/json",
         "Authorization: Bearer ${BuildConfig.API_KEY}")
     @POST("/v1/chat/completions")
-    fun getChatCompletion(@Body request: ChatCompletionRequest): Call<AiResponseViewModel>
+    fun getChatCompletion(@Body request: ChatCompletionRequest): Call<AiResponseModel>
 }
 

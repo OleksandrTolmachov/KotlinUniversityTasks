@@ -1,10 +1,8 @@
-package com.example.finalproject.models.response
+package com.example.finalproject.data.dataModels
 
-import com.example.finalproject.models.request.ChatCompletionChoice
-import com.example.finalproject.models.request.ChatCompletionUsage
 import com.google.gson.annotations.SerializedName
 
-data class AiResponseViewModel(
+data class AiResponseModel(
     val id: String,
     @SerializedName("object")
     val chatObject: String,

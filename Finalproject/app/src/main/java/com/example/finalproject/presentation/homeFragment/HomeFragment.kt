@@ -1,4 +1,4 @@
-package com.example.finalproject.views
+package com.example.finalproject.presentation.homeFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,14 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import com.example.finalproject.R
-import com.example.finalproject.viewmodels.RequestViewModel
+import com.example.finalproject.presentation.responseFragment.DataFragment
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
-    private val viewModel: RequestViewModel by activityViewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,17 +24,20 @@ class HomeFragment : Fragment() {
         setSpinnerChoices(view.findViewById(R.id.spinner))
 
         button?.setOnClickListener {
+
+            val bundle = Bundle()
             val messageInput = view.findViewById<EditText>(R.id.messageInput)
-            val message = messageInput?.text.toString()
+            bundle.putString("message", messageInput?.text.toString())
 
             val roleInput = view.findViewById<Spinner>(R.id.spinner)
-            val role = roleInput?.selectedItem.toString()
+            bundle.putString("role", roleInput?.selectedItem.toString())
 
-            viewModel.setMessage(message)
-            viewModel.setRole(role)
+            val destinationFragment = DataFragment()
+            destinationFragment.arguments = bundle
 
-            val nextFragment = DataFragment()
-            fragmentManager?.beginTransaction()?.replace(R.id.fragmentHost, nextFragment)?.commit()
+            parentFragmentManager.beginTransaction().replace(R.id.fragmentHost, destinationFragment)
+                .addToBackStack(null)
+                .commit()
         }
 
         return view
