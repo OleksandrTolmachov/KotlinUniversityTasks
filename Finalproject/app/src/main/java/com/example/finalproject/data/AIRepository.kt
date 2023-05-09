@@ -43,11 +43,9 @@ class AIRepository {
             )
         )
 
-        try {
+        runCatching {
             val response = apiInterface.getChatCompletion(request).execute()
             response.body()
-        } catch (e: Exception) {
-            null
-        }
+        }.getOrNull()
     }
 }
